@@ -1,0 +1,162 @@
+@import "macchiato.css";
+
+* {
+  font-family: "JetbrainsMono Medium";
+  /* font-family: "JetBrainsMono Nerd Font"; */
+  font-size: 16px;
+  border: 0;
+}
+
+window#waybar {
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 13px;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces {
+	color: transparent;
+}
+
+#workspaces button {
+	margin: 3px 0;
+	padding: 0 4px;
+	background-color: @crust2;
+}
+
+#workspaces button:hover {
+	border-radius: 0px;
+	border: 1px solid @lavender;
+}
+
+#workspaces button.active {
+	background-color: @crust;
+	border-radius: 0px;
+	border: 1px solid @lavender;
+	border-top: 3px solid @lavender;
+	border-bottom: 3px solid @lavender;
+}
+
+#workspaces button.empty {
+	background-color: transparent;
+	border-radius: 0px;
+}
+
+#workspaces button.urgent * {
+	color: rgba(246, 71, 71, 0.8);
+}
+
+#mode {
+	background-color: #64727D;
+	box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio {
+  padding: 3 13px;
+}
+
+#pulseaudio {
+	background-color: rgba(0,0,0,0.5);
+	color: @yellow;
+	border: 10px solid @yellow;
+	border-width: 3px;
+	border-radius: 10px;
+}
+
+#network {
+	background-color: rgba(0,0,0,0.5);
+	color: @maroon;
+	border: 10px solid @maroon;
+	border-width: 3px;
+	border-radius: 10px;
+}
+
+#battery {
+	background-color: rgba(0,0,0,0.5);
+	color: @green;
+	border: 10px solid @green;
+	border-width: 3px;
+	border-radius: 10px;
+}
+
+#clock {
+	background-color: rgba(0,0,0,0.5);
+	color: @blue;
+	border: 10px solid @blue;
+	border-width: 3px;
+	border-radius: 10px;
+}
+
+#window {
+	color: @rosewater;
+	font-size: 13px;
+}
+
+.modules-right {
+	background-color: rgba(0,0,0,0);
+	padding: 0 0px;
+}
+
+.modules-left {
+	border-radius: 13px;
+	padding: 0 13px;
+	background-color: @base;
+	border-radius: 15px;
+}
+
+.modules-center {
+	border-radius: 13px;
+	padding: 0 13px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 15px;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @green;
+}
+
+@keyframes blink {
+  to {
+    color: #000000;
+  }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#pulseaudio.muted {
+  color: @yellow;
+}
