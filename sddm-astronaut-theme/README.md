@@ -1,6 +1,6 @@
 # sddm-Flandre
 
-This sddm theme is completely copied of sddm-astronaut-theme : **[github](https://github.com/Keyitdev/sddm-astronaut-theme/tree/master/Themes). I just changed the background image, the fonts and other stuff here and there.
+This sddm theme is completely copied of sddm-astronaut-theme on [github](https://github.com/Keyitdev/sddm-astronaut-theme/tree/master/Themes). I just changed the background image, the fonts and other stuff here and there.
 
 ## Installation
 
@@ -66,7 +66,7 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 
 ## Sources
 
-Link to the original : **[github](https://github.com/Keyitdev/sddm-astronaut-theme/tree/master/Themes)(https://github.com/Keyitdev/sddm-astronaut-theme/tree/master/Themes).
+[github](https://github.com/Keyitdev/sddm-astronaut-theme/tree/master/Themes) link to the original.
 
 Distributed under the **[GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html) License**.    
 Copyright (C) 2022-2025 Keyitdev.
