@@ -66,7 +66,7 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 
 ## Sources
 
-Original : **[github](https://github.com/Keyitdev/sddm-astronaut-theme/tree/master/Themes).
+Link to the original : **[github](https://github.com/Keyitdev/sddm-astronaut-theme/tree/master/Themes)(https://github.com/Keyitdev/sddm-astronaut-theme/tree/master/Themes).
 
 Distributed under the **[GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html) License**.    
 Copyright (C) 2022-2025 Keyitdev.
